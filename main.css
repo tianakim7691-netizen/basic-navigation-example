@@ -1,5 +1,6 @@
 * {
-box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style:circle;
@@ -12,32 +13,30 @@ header {
 }
 
 nav{
-    background-color: #656565;
+    background-color: #000000;
     padding: 8px 16px;   
     border-radius: 16px;
 }
 
 header nav > a {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
 }
 
 header nav > span {
     display: inline-block;
    /* border: solid 1px red;*/
    /*parents width-log width*/
-    width: calc(100% - 45px - 276px - 2px - 8px);
+   /* width: calc(100% - 10px - 276px - 2px - 5px);*/
 }
 
 
 /* Nav Menu(nav>ul) */
-header nav ul {
+header nav ul li {
     display: inline-block;
+    margin-right: 20px;
     
 }
 
-header nav ul li {
-    margin-right: 20px;
-}
 
 
 /* Nav Links (nav >ul > li> a) */
@@ -47,7 +46,7 @@ header nav ul li {
 }
 
 header nav > a img {
-    width: 50px;
+    width: 40px;
     height: auto;
     background-color: white;
 }
@@ -60,4 +59,77 @@ header nav > a img {
 
 .nablink:active {
     color: rgb(229,149,0);
+}
+
+
+/* ------------side navigation------------- */
+
+.side-nav {
+  width: 200px;        
+  background-color: #333;
+  color: #ccc;
+  padding: 20px; 
+  position: fixed;           
+  right: 0;                  
+  top: 0;                   
+  height: 100%;
+}
+
+.side-nav h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-nav ul li {
+  margin-bottom: 10px;
+}
+
+.side-nav ul li a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.side-nav ul li a:hover {
+  text-decoration: none;
+}
+
+
+
+/* Flex 없이 할 순 없을까 ㅜ_ㅜ */
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+footer {
+    font-size: small;
+    text-align: center;
+    display: inline-block;
+    color: aliceblue;
+    margin-right: 20px;
+    padding: 20px 20px 0px 0px;
+    background-color: #000000;
+}
+
+.footer-text {
+    font-size: small;
+    color: pink;
+    padding: 10px 10px;
 }
